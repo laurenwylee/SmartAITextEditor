@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete!</title>
+    <style>
+        .grid {
+            display: grid;
+        }
+        .bottom-margin {
+            margin-bottom: 24px;
+        }
+        div {
+            outline: 0px solid black;
+        }
+        .oneCol {
+            grid-template-columns: 1fr;
+        }
+        .twoCol {
+            grid-template-columns: 1fr 1fr;
+        }
+        .button {
+            padding: 4px 12px 4px 12px;
+        }
+        select {
+            padding: 4px 12px 4px 12px;
+        }
+        body {
+            padding: 0px 200px 0px 200px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <h1>Welcome to our Google Project!</h1>
+    <div class="grid oneCol">
+
+        <textarea name="input" rows="6" style="margin-bottom: 4px" placeholder="Input text here..." form="inputform">[input]</textarea>
+        
+        <form method="post" id="inputform">
+            <input name="inputsubmit" class="bottom-margin button" type="submit">
+        </form>
+
+        <div class="grid twoCol">
+            <textarea name="grammar" rows="6" class="bottom-margin" style="margin-right: 12px" placeholder="Grammar corrections will show up here...">[grammar]</textarea>
+            <div class="bottom-margin" style="margin-left: 12px" class="grid oneCol">
+                <textarea name="spellcheck" rows="6" style="margin-bottom: 8px; width: 100%" placeholder="Spelling corrections will show up here...">[spell]</textarea>
+                <div style="display: flex; justify-content: space-between;">
+                    <select name="accept" name="accept">
+                        <option value="accept">Accept?</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+
+                    </select>
+                    <button>Ignore</button>
+                    <button>Add to dict</button>
+                    <div style="width: 30%"></div>
+                </div>
+
+            </div>
+        </div>
+        <textarea name="autocomplete" rows="6" placeholder="Autocompleted text will show up here...">[auto]</textarea>
+
+    </div>
+
+
+
+
+  </body>
+</html>
